@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ficha de Treino — Karla Terra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --green-deep:  #0a2818;
+    --green-mid:   #154d2e;
+    --green-main:  #1e7042;
+    --green-light: #2ea05e;
+    --accent:      #b8e832;
+    --bg:          #f0ece4;
+    --bg-alt:      #e6e1d8;
+    --ink:         #0d1a10;
+    --ink-mid:     #2a3a2d;
+    --ink-soft:    #475a4a;
+    --border:      #b8c4bb;
+    --border-dark: #8fa496;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    font-size: 13px;
+    overflow-x: hidden;
+  }
+
+  /* ── HEADER ─────────────────────────────────────── */
+  .header {
+    background: var(--green-deep);
+    padding: 26px 20px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% -10%, rgba(46,160,94,0.2) 0%, transparent 70%);
+  }
+  .header-inner {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .prog-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(26px, 7vw, 44px);
+    color: #fff;
+    line-height: 0.95;
+    letter-spacing: 1.5px;
+  }
+  .prog-title span { color: var(--accent); }
+  .student-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .student-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 0.4px;
+  }
+  .sep { color: rgba(255,255,255,0.25); }
+  .header-meta { font-size: 12px; color: rgba(255,255,255,0.55); }
+  .chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 2px; }
+  .chip {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.13);
+    color: rgba(255,255,255,0.75);
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .chip.hi {
+    background: rgba(184,232,50,0.12);
+    border-color: rgba(184,232,50,0.4);
+    color: var(--accent);
+  }
+
+  /* ── LEGEND BAR ─────────────────────────────────── */
+  .legend-bar {
+    background: var(--green-mid);
+    padding: 7px 20px;
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.3px;
+  }
+  .legend-bar strong { color: var(--accent); }
+
+  /* ── CONTENT ────────────────────────────────────── */
+  .content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 14px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* ── TREINO CARD ────────────────────────────────── */
+  .treino-card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1.5px solid var(--border-dark);
+    box-shadow: 0 2px 10px rgba(10,40,24,0.1);
+  }
+  .card-header {
+    background: var(--green-deep);
+    padding: 12px 18px 11px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+  }
+  .treino-badge {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 30px;
+    color: var(--accent);
+    line-height: 1;
+    min-width: 24px;
+  }
+  .card-title-main {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    letter-spacing: 1.5px;
+  }
+  .card-title-sub {
+    font-size: 11px;
+    color: var(--green-light);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 1px;
+  }
+
+  /* ── TABLE ──────────────────────────────────────── */
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px;
+  }
+
+  thead tr { background: var(--green-mid); }
+  thead th {
+    padding: 8px 10px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
+    color: rgba(255,255,255,0.9);
+    text-align: center;
+    border: 1px solid #0d3a20;
+    white-space: nowrap;
+  }
+  thead th:nth-child(2) { text-align: left; }
+
+  tbody tr:nth-child(odd)  { background: var(--bg); }
+  tbody tr:nth-child(even) { background: var(--bg-alt); }
+  tbody tr:hover { background: #dff3e8; }
+
+  tbody td {
+    padding: 8px 10px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--ink-mid);
+    text-align: center;
+    border: 1px solid var(--border);
+    vertical-align: top;
+  }
+  tbody td:nth-child(1) {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--green-main);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+  }
+  tbody td:nth-child(2) {
+    text-align: left;
+    font-weight: 600;
+    color: var(--ink);
+    min-width: 160px;
+  }
+  tbody td:nth-child(4) { white-space: nowrap; }
+  tbody td:last-child {
+    text-align: left;
+    font-size: 11.5px;
+    font-style: italic;
+    color: var(--ink-soft);
+    font-weight: 400;
+    min-width: 180px;
+  }
+
+  /* ── EXERCISE IMAGE ─────────────────────────────── */
+  .ex-img {
+    width: 130px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 6px;
+    display: block;
+    background: var(--bg-alt);
+  }
+  thead th.th-img { width: 142px; text-align: center; }
+  tbody td.td-img { padding: 6px 8px; text-align: center; vertical-align: middle; }
+
+  .prog {
+    display: block;
+    font-size: 10px;
+    color: var(--ink-soft);
+    font-style: italic;
+    font-weight: 400;
+    margin-top: 2px;
+    letter-spacing: 0;
+  }
+
+  /* ── FOOTER ─────────────────────────────────────── */
+  footer {
+    background: var(--green-deep);
+    color: rgba(255,255,255,0.4);
+    text-align: center;
+    font-size: 10px;
+    padding: 14px;
+    letter-spacing: 0.3px;
+  }
+  footer span { color: var(--accent); }
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-inner">
+    <div class="prog-title">Hipertrofia<br><span>Avançada</span></div>
+    <div class="student-row">
+      <div class="student-name">Karla Terra</div>
+      <div class="sep">·</div>
+      <div class="header-meta">Início 08/03/2026</div>
+      <div class="sep">·</div>
+      <div class="header-meta">Deload semana 9 — 11/05/2026</div>
+    </div>
+    <div class="chips">
+      <span class="chip">5 dias / semana</span>
+      <span class="chip hi">Progressão semanal de carga</span>
+      <span class="chip">A · B · C · D · E</span>
+    </div>
+  </div>
+</header>
+
+<div class="legend-bar">
+  <strong>S1 / S2 / S3 / S4</strong> — progressão de repetições por semana
+</div>
+
+<main class="content">
+
+  <!-- TREINO A -->
+  <div class="treino-card">
+    <div class="card-header">
+      <div class="treino-badge">A</div>
+      <div>
+        <div class="card-title-main">Treino A</div>
+        <div class="card-title-sub">Glúteo + Isquiotibiais</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th class="th-img">Demo</th><th>Músculos</th><th>Exercício</th><th>Séries</th><th>Repetições</th><th>Intervalo</th><th>Técnica</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Hip-Thrust.gif" alt="Hip Thrust com Barra" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Hip Thrust com Barra</td>
+            <td>5</td>
+            <td>6–10 <span class="prog">↑ 6 / 7 / 9 / 10</span></td>
+            <td>1'30"</td>
+            <td>Pausa 2s no topo, desça em 3s (excêntrico)</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif" alt="Terra Romeno com Barra" loading="lazy"></td>
+            <td>Isquiotibiais</td>
+            <td>Terra Romeno com Barra</td>
+            <td>4</td>
+            <td>8–12 <span class="prog">↑ 8 / 9 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Desça em 3s; não hiperestenda a lombar</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Hip-Abduction.gif" alt="Cadeira Abdutora" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Cadeira Abdutora</td>
+            <td>4</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Feche devagar (3s excêntrico); contraia no pico</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://cdn.jefit.com/assets/img/exercises/gifs/161.gif" alt="Mesa Flexora" loading="lazy"></td>
+            <td>Isquiotibiais</td>
+            <td>Mesa Flexora</td>
+            <td>4</td>
+            <td>10–12 <span class="prog">↑ 10 / 10 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Suba rápido, desça lento (3s excêntrico)</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.inspireusafoundation.org/wp-content/uploads/2023/03/dumbbell-single-leg-hip-thrust.gif" alt="Hip Thrust Unilateral no Banco" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Hip Thrust Unilateral no Banco</td>
+            <td>3</td>
+            <td>12 cada <span class="prog">↑ carga</span></td>
+            <td>1'30"</td>
+            <td>Desça em 4s; foco no lado mais fraco</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.inspireusafoundation.org/wp-content/uploads/2022/11/straight-leg-deadlift.gif" alt="Stiff com Halteres" loading="lazy"></td>
+            <td>Isquiotibiais</td>
+            <td>Stiff com Halteres</td>
+            <td>3</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Amplitude máxima; controle total da descida</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TREINO B -->
+  <div class="treino-card">
+    <div class="card-header">
+      <div class="treino-badge">B</div>
+      <div>
+        <div class="card-title-main">Treino B</div>
+        <div class="card-title-sub">Costas + Bíceps</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th class="th-img">Demo</th><th>Músculos</th><th>Exercício</th><th>Séries</th><th>Repetições</th><th>Intervalo</th><th>Técnica</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Bent-Over-Dumbbell-Row.gif" alt="Remada Curvada" loading="lazy"></td>
+            <td>Costas</td>
+            <td>Remada Curvada (Bent Over Row)</td>
+            <td>4</td>
+            <td>6–10 <span class="prog">↑ 6 / 7 / 9 / 10</span></td>
+            <td>1'30"</td>
+            <td>Cotovelo a 45°; aperte a escápula no topo</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif" alt="Puxada no Pulley" loading="lazy"></td>
+            <td>Costas</td>
+            <td>Puxada no Pulley (pegada supinada fechada)</td>
+            <td>4</td>
+            <td>8–12 <span class="prog">↑ 8 / 9 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Sem balanço; controle total; puxe para o peito</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif" alt="Remada Sentada no Cabo" loading="lazy"></td>
+            <td>Costas</td>
+            <td>Remada Sentada no Cabo</td>
+            <td>3</td>
+            <td>10–12 <span class="prog">↑ 10 / 10 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Retração escapular completa; desça controlado</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/07/one-arm-Cable-Lateral-Raise.gif" alt="Puxada Unilateral no Cabo" loading="lazy"></td>
+            <td>Costas</td>
+            <td>Puxada Unilateral no Cabo</td>
+            <td>3</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Puxe cotovelo para o quadril; controle a subida</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.inspireusafoundation.org/wp-content/uploads/2023/07/barbell-pullover.gif" alt="Pullover com Halter" loading="lazy"></td>
+            <td>Costas</td>
+            <td>Pullover com Halter</td>
+            <td>3</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Amplitude máxima; sinta o alongamento do dorsal</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.inspireusafoundation.org/wp-content/uploads/2023/02/ez-bar-bicep-curl.gif" alt="Rosca Direta com Barra" loading="lazy"></td>
+            <td>Bíceps</td>
+            <td>Rosca Direta com Barra</td>
+            <td>3</td>
+            <td>8–12 <span class="prog">↑ 8 / 9 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Sem balanço de tronco; desça controlado</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://cdn.jefit.com/assets/img/exercises/gifs/32.gif" alt="Rosca Concentrada" loading="lazy"></td>
+            <td>Bíceps</td>
+            <td>Rosca Concentrada</td>
+            <td>3</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Pausa 1s no pico; cotovelo apoiado na coxa</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TREINO C -->
+  <div class="treino-card">
+    <div class="card-header">
+      <div class="treino-badge">C</div>
+      <div>
+        <div class="card-title-main">Treino C</div>
+        <div class="card-title-sub">Quadríceps + Glúteo</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th class="th-img">Demo</th><th>Músculos</th><th>Exercício</th><th>Séries</th><th>Repetições</th><th>Intervalo</th><th>Técnica</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Squats.gif" alt="Agachamento Livre com Barra" loading="lazy"></td>
+            <td>Coxas</td>
+            <td>Agachamento Livre com Barra</td>
+            <td>5</td>
+            <td>5–8 <span class="prog">↑ 5 / 6 / 7 / 8</span></td>
+            <td>1'30"</td>
+            <td>Profundidade total; desça em 3s; joelhos alinhados</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/06/Leg-Press.gif" alt="Leg Press 45°" loading="lazy"></td>
+            <td>Coxas</td>
+            <td>Leg Press 45° (pés altos e largos)</td>
+            <td>4</td>
+            <td>10–15 <span class="prog">↑ 10 / 11 / 13 / 15</span></td>
+            <td>1'30"</td>
+            <td>Pausa 1s no fundo; desça em 3s; ativa glúteo</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://cdn.jefit.com/assets/img/exercises/gifs/199.gif" alt="Avanço com Halteres" loading="lazy"></td>
+            <td>Coxas / Glúteo</td>
+            <td>Avanço (Passada) com Halteres</td>
+            <td>4</td>
+            <td>10–12 cada <span class="prog">↑ 10 / 10 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Joelho traseiro toca o chão; tronco ereto</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.inspireusafoundation.org/file/2021/06/leg-extension-machine.gif" alt="Cadeira Extensora" loading="lazy"></td>
+            <td>Coxas</td>
+            <td>Cadeira Extensora</td>
+            <td>3</td>
+            <td>12–20 <span class="prog">↑ 12 / 14 / 17 / 20</span></td>
+            <td>1'30"</td>
+            <td>Drop set na última série: falha → reduz 20% → falha</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/05/Dumbbell-Bulgarian-Split-Squat.gif" alt="Agachamento Búlgaro" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Agachamento Búlgaro com Halteres</td>
+            <td>3</td>
+            <td>10–12 cada <span class="prog">↑ 10 / 10 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Perna da frente ativa o glúteo; banco alto = mais quadril</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Hip-Abduction.gif" alt="Abdução de Quadril no Cabo" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Abdução de Quadril em Pé no Cabo</td>
+            <td>3</td>
+            <td>15–20 cada <span class="prog">↑ 15 / 16 / 18 / 20</span></td>
+            <td>1'30"</td>
+            <td>Tronco reto; não incline o quadril para ajudar</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TREINO D -->
+  <div class="treino-card">
+    <div class="card-header">
+      <div class="treino-badge">D</div>
+      <div>
+        <div class="card-title-main">Treino D</div>
+        <div class="card-title-sub">Ombros + Tríceps</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th class="th-img">Demo</th><th>Músculos</th><th>Exercício</th><th>Séries</th><th>Repetições</th><th>Intervalo</th><th>Técnica</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif" alt="Desenvolvimento com Halteres" loading="lazy"></td>
+            <td>Deltoides</td>
+            <td>Desenvolvimento com Halteres</td>
+            <td>4</td>
+            <td>8–12 <span class="prog">↑ 8 / 9 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Não hiperestenda a lombar; desça até 90°</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/10/Dumbbell-Lateral-to-Front-Raise.gif" alt="Elevação Lateral com Halteres" loading="lazy"></td>
+            <td>Deltoides</td>
+            <td>Elevação Lateral com Halteres</td>
+            <td>4</td>
+            <td>12–20 <span class="prog">↑ 12 / 14 / 17 / 20</span></td>
+            <td>1'30"</td>
+            <td>Cotovelo levemente flexionado; suba até a altura do ombro</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Lateral-Raise.gif" alt="Elevação Lateral no Cabo" loading="lazy"></td>
+            <td>Deltoides</td>
+            <td>Elevação Lateral no Cabo (unilateral)</td>
+            <td>3</td>
+            <td>12–15 cada <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Tensão constante no cabo; não deixe o cotovelo cair</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif" alt="Face Pull na Polia" loading="lazy"></td>
+            <td>Deltoides</td>
+            <td>Face Pull na Polia (corda)</td>
+            <td>3</td>
+            <td>15–20 <span class="prog">↑ 15 / 16 / 18 / 20</span></td>
+            <td>1'30"</td>
+            <td>Puxe para os olhos com corda; abre os cotovelos</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif" alt="Tríceps Pulley" loading="lazy"></td>
+            <td>Tríceps</td>
+            <td>Tríceps Pulley (barra reta)</td>
+            <td>4</td>
+            <td>10–15 <span class="prog">↑ 10 / 11 / 13 / 15</span></td>
+            <td>1'30"</td>
+            <td>Cotovelos fixos ao lado do corpo; desça controlado</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/06/Dumbbell-Skull-Crusher.gif" alt="Rosca Testa com Halteres" loading="lazy"></td>
+            <td>Tríceps</td>
+            <td>Rosca Testa com Halteres (Tríceps)</td>
+            <td>3</td>
+            <td>10–15 <span class="prog">↑ 10 / 11 / 13 / 15</span></td>
+            <td>1'30"</td>
+            <td>Amplitude completa; cotovelos apontados para cima</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/04/Weight-Plate-Front-Raise-1.gif" alt="Elevação Frontal com Disco" loading="lazy"></td>
+            <td>Deltoides</td>
+            <td>Elevação Frontal com Disco</td>
+            <td>2</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Apenas se houver energia; suba até a altura do ombro</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- TREINO E -->
+  <div class="treino-card">
+    <div class="card-header">
+      <div class="treino-badge">E</div>
+      <div>
+        <div class="card-title-main">Treino E</div>
+        <div class="card-title-sub">Glúteo Full + Adutores + Core</div>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr>
+          <th class="th-img">Demo</th><th>Músculos</th><th>Exercício</th><th>Séries</th><th>Repetições</th><th>Intervalo</th><th>Técnica</th>
+        </tr></thead>
+        <tbody>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Hip-Thrust.gif" alt="Hip Thrust Unilateral com Barra" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Hip Thrust Unilateral com Barra</td>
+            <td>4</td>
+            <td>10–12 cada <span class="prog">↑ 10 / 10 / 11 / 12</span></td>
+            <td>1'30"</td>
+            <td>Pausa 2s no topo; quadril nivelado durante o movimento</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/dumbbell-sumo-squat.gif" alt="Agachamento Lateral Sumo" loading="lazy"></td>
+            <td>Glúteo / Adutores</td>
+            <td>Agachamento Lateral (Sumo Lateral)</td>
+            <td>4</td>
+            <td>12 cada <span class="prog">↑ carga</span></td>
+            <td>1'30"</td>
+            <td>Desça até 90° na perna de apoio; tronco ereto</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/05/Cable-Hips-Adduction.gif" alt="Cadeira Adutora" loading="lazy"></td>
+            <td>Adutores</td>
+            <td>Cadeira Adutora</td>
+            <td>4</td>
+            <td>12–15 <span class="prog">↑ 12 / 13 / 14 / 15</span></td>
+            <td>1'30"</td>
+            <td>Feche devagar (3s excêntrico); pausa no pico</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Hip-Abduction.gif" alt="Abdução em Pé com Cabo" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Abdução em Pé com Cabo</td>
+            <td>4</td>
+            <td>15–20 cada <span class="prog">↑ 15 / 16 / 18 / 20</span></td>
+            <td>1'30"</td>
+            <td>Tronco reto; não balance o quadril para ajudar</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/05/Cable-Donkey-Kickback.gif" alt="Coice de Glúteo no Cabo" loading="lazy"></td>
+            <td>Glúteo</td>
+            <td>Coice de Glúteo no Cabo (Kickback)</td>
+            <td>3</td>
+            <td>15 cada <span class="prog">↑ carga</span></td>
+            <td>1'30"</td>
+            <td>Joelho levemente flexionado; contraia glúteo no topo</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://fitnessprogramer.com/wp-content/uploads/2021/02/dumbbell-sumo-squat.gif" alt="Agachamento Sumô com Halter" loading="lazy"></td>
+            <td>Glúteo / Adutores</td>
+            <td>Agachamento Sumô com Halter</td>
+            <td>3</td>
+            <td>15–20 <span class="prog">↑ 15 / 16 / 18 / 20</span></td>
+            <td>1'30"</td>
+            <td>Amplitude total; pausa 2s no fundo; joelhos para fora</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://cdn.jefit.com/assets/img/exercises/gifs/922.gif" alt="Prancha com Elevação de Quadril" loading="lazy"></td>
+            <td>Core</td>
+            <td>Prancha com Elevação de Quadril</td>
+            <td>3</td>
+            <td>45s <span class="prog">↑ 45s / 50s / 55s / 60s</span></td>
+            <td>1'</td>
+            <td>Corpo rígido; eleve o quadril lentamente e desça</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.garagegymreviews.com/wp-content/uploads/2022/11/dead-bugs.gif" alt="Dead Bug" loading="lazy"></td>
+            <td>Core</td>
+            <td>Dead Bug (Extensão Alternada)</td>
+            <td>3</td>
+            <td>10 cada lado <span class="prog">↑ carga</span></td>
+            <td>1'</td>
+            <td>Lombar colada no chão; braço e perna opostos simultâneos</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://www.inspireusafoundation.org/wp-content/uploads/2022/06/hanging-leg-raise-movement.gif" alt="Elevação de Pernas no Suporte" loading="lazy"></td>
+            <td>Core</td>
+            <td>Elevação de Pernas no Suporte (paralela)</td>
+            <td>3</td>
+            <td>15 <span class="prog">↑ carga</span></td>
+            <td>1'</td>
+            <td>Não balance; desça as pernas antes de tocar o chão</td>
+          </tr>
+          <tr>
+            <td class="td-img"><img class="ex-img" src="https://cdn.jefit.com/assets/img/exercises/gifs/744.gif" alt="Giro de Tronco no Cabo" loading="lazy"></td>
+            <td>Core</td>
+            <td>Giro de Tronco no Cabo (Wood Chop)</td>
+            <td>3</td>
+            <td>12 cada lado <span class="prog">↑ carga</span></td>
+            <td>1'</td>
+            <td>Quadril fixo; gire apenas o tronco; controle a volta</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  Ficha de Treino — <span>Karla Terra</span> · Início 08/03/2026 · Deload semana 9 — 11/05/2026
+</footer>
+
+</body>
+</html>
