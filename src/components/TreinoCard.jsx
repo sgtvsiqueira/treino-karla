@@ -35,10 +35,7 @@ export default function TreinoCard({ treino }) {
                 <td>{ex.musculos}</td>
                 <td>{ex.exercicio}</td>
                 <td>{ex.series}</td>
-                <td>
-                  {ex.repeticoes}
-                  <span className="prog">{ex.prog}</span>
-                </td>
+                <td>{ex.repeticoes}</td>
                 <td>{ex.intervalo}</td>
                 <td>{ex.tecnica}</td>
               </tr>
