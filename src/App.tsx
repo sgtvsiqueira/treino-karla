@@ -7,15 +7,15 @@ export default function App() {
       <header className="header">
         <div className="header-inner">
           <div className="prog-title">
-            Hipertrofia<br />
-            <span>Avançada</span>
+            Periodização<br />
+            <span>Glúteos</span>
           </div>
           <div className="student-row">
             <div className="student-name">Karla Terra</div>
             <div className="sep">·</div>
-            <div className="header-meta">Início 08/03/2026</div>
+            <div className="header-meta">Início 15/05/2026</div>
             <div className="sep">·</div>
-            <div className="header-meta">Deload semana 9 — 11/05/2026</div>
+            <div className="header-meta">Deload semana 9 — 13/07/2026</div>
           </div>
           <div className="chips">
             <span className="chip">5 dias / semana</span>
@@ -26,7 +26,7 @@ export default function App() {
       </header>
 
       <div className="legend-bar">
-        <strong>S1 / S2 / S3 / S4</strong> — progressão de repetições por semana
+        <strong>Pirâmide crescente</strong> — aumente o peso a cada série e diminua as repetições
       </div>
 
       <main className="content">
@@ -36,7 +36,7 @@ export default function App() {
       </main>
 
       <footer>
-        Ficha de Treino — <span>Karla Terra</span> · Início 08/03/2026 · Deload semana 9 — 11/05/2026
+        Ficha de Treino — <span>Karla Terra</span> · Início 15/05/2026 · Deload semana 9 — 13/07/2026
       </footer>
     </>
   )

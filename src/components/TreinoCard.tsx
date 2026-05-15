@@ -1,4 +1,10 @@
-export default function TreinoCard({ treino }) {
+import type { Treino } from '../data/treinos'
+
+interface Props {
+  treino: Treino
+}
+
+export default function TreinoCard({ treino }: Props) {
   return (
     <div className="treino-card">
       <div className="card-header">
