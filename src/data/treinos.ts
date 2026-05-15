@@ -1,3 +1,5 @@
+import { gifs } from './gifs'
+
 export interface Exercicio {
   imgSrc: string
   imgAlt: string
@@ -23,7 +25,7 @@ export const treinos: Treino[] = [
     subtitulo: 'Superior — apenas 1x por semana',
     exercicios: [
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2022/04/Wide-Grip-Lat-Pulldown.gif',
+        imgSrc: gifs.widegripLatPulldown,
         imgAlt: 'Puxada Frontal pegada pronada larga',
         musculos: 'Costas',
         exercicio: 'Puxada Frontal (pegada pronada larga)',
@@ -33,7 +35,7 @@ export const treinos: Treino[] = [
         tecnica: 'Puxe para a clavícula; escápula para baixo',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif',
+        imgSrc: gifs.dumbbellRow,
         imgAlt: 'Remada Unilateral com Halter',
         musculos: 'Costas',
         exercicio: 'Remada Unilateral com Halter',
@@ -43,7 +45,7 @@ export const treinos: Treino[] = [
         tecnica: 'Cotovelo para trás; sem rotação de tronco',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Arnold-Press.gif',
+        imgSrc: gifs.arnoldPress,
         imgAlt: 'Desenvolvimento Arnold',
         musculos: 'Deltoides',
         exercicio: 'Desenvolvimento Arnold',
@@ -53,7 +55,7 @@ export const treinos: Treino[] = [
         tecnica: 'Rotação completa do ombro; não hiperestenda a lombar',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Reverse-Cable-Fly.gif',
+        imgSrc: gifs.reverseCableFly,
         imgAlt: 'Crucifixo Inverso na Polia',
         musculos: 'Deltoides Posterior',
         exercicio: 'Crucifixo Inverso na Polia (corda dupla)',
@@ -63,7 +65,7 @@ export const treinos: Treino[] = [
         tecnica: 'Abre os cotovelos; aperte escápula no final',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/10/Dumbbell-Lateral-to-Front-Raise.gif',
+        imgSrc: gifs.dumbbellLateralRaise,
         imgAlt: 'Elevação Lateral com Halteres',
         musculos: 'Deltoides',
         exercicio: 'Elevação Lateral com Halteres',
@@ -73,7 +75,7 @@ export const treinos: Treino[] = [
         tecnica: 'Cotovelo levemente flexionado; suba até a altura do ombro',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Skull-Crusher.gif',
+        imgSrc: gifs.skullCrusher,
         imgAlt: 'Tríceps Testa com Halteres',
         musculos: 'Tríceps',
         exercicio: 'Tríceps Testa com Halteres',
@@ -83,7 +85,7 @@ export const treinos: Treino[] = [
         tecnica: 'Amplitude completa; cotovelos apontados para cima',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif',
+        imgSrc: gifs.hammerCurl,
         imgAlt: 'Rosca Martelo com Halteres',
         musculos: 'Bíceps',
         exercicio: 'Rosca Martelo com Halteres',
@@ -100,7 +102,7 @@ export const treinos: Treino[] = [
     subtitulo: 'Glúteo + Isquiotibiais — Foco Posterior',
     exercicios: [
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Deadlift.gif',
+        imgSrc: gifs.barbellDeadlift,
         imgAlt: 'Levantamento Terra Convencional',
         musculos: 'Glúteo / Isquiotibiais',
         exercicio: 'Levantamento Terra Convencional',
@@ -110,7 +112,7 @@ export const treinos: Treino[] = [
         tecnica: 'Lombar neutra; quadril inicia o movimento',
       },
       {
-        imgSrc: 'https://cdn.jefit.com/assets/img/exercises/gifs/161.gif',
+        imgSrc: gifs.legCurl,
         imgAlt: 'Leg Curl Deitado',
         musculos: 'Isquiotibiais',
         exercicio: 'Leg Curl Deitado (mesa flexora)',
@@ -120,7 +122,7 @@ export const treinos: Treino[] = [
         tecnica: 'Suba rápido, desça em 3s (excêntrico)',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Hip-Thrust.gif',
+        imgSrc: gifs.barbellHipThrust,
         imgAlt: 'Hip Thrust com Barra',
         musculos: 'Glúteo',
         exercicio: 'Hip Thrust com Barra (bilateral)',
@@ -130,7 +132,7 @@ export const treinos: Treino[] = [
         tecnica: 'Pausa 2s no topo; desça em 3s',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif',
+        imgSrc: gifs.barbellRomanianDeadlift,
         imgAlt: 'Stiff com Barra',
         musculos: 'Isquiotibiais',
         exercicio: 'Stiff com Barra',
@@ -140,7 +142,7 @@ export const treinos: Treino[] = [
         tecnica: 'Amplitude máxima; mantém joelhos levemente flexionados',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Hip-Abduction.gif',
+        imgSrc: gifs.cableHipAbduction,
         imgAlt: 'Cadeira Abdutora',
         musculos: 'Glúteo',
         exercicio: 'Cadeira Abdutora',
@@ -150,7 +152,7 @@ export const treinos: Treino[] = [
         tecnica: 'Feche devagar (3s excêntrico)',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2022/01/Plank-Hip-Dips.gif',
+        imgSrc: gifs.plankHipDips,
         imgAlt: 'Prancha Lateral com Abdução',
         musculos: 'Core / Glúteo Médio',
         exercicio: 'Prancha Lateral com Abdução',
@@ -167,7 +169,7 @@ export const treinos: Treino[] = [
     subtitulo: 'Quadríceps + Glúteo — Foco Anterior',
     exercicios: [
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Goblet-Squat.gif',
+        imgSrc: gifs.gobletSquat,
         imgAlt: 'Agachamento Goblet com Halter',
         musculos: 'Coxas / Glúteo',
         exercicio: 'Agachamento Goblet com Halter',
@@ -177,7 +179,7 @@ export const treinos: Treino[] = [
         tecnica: 'Profundidade total; cotovelos dentro; contraia glúteo no topo',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Leg-Press.gif',
+        imgSrc: gifs.hackSquat,
         imgAlt: 'Hack Squat na Máquina',
         musculos: 'Coxas / Glúteo',
         exercicio: 'Hack Squat na Máquina (pés altos e largos)',
@@ -187,7 +189,7 @@ export const treinos: Treino[] = [
         tecnica: 'Desça em 3s; pausa 1s no fundo',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Reverse-Lunge.gif',
+        imgSrc: gifs.reverseLunge,
         imgAlt: 'Avanço Reverso com Halteres',
         musculos: 'Coxas / Glúteo',
         exercicio: 'Avanço Reverso (Step Back) com Halteres',
@@ -197,7 +199,7 @@ export const treinos: Treino[] = [
         tecnica: 'Joelho da frente alinhado; tronco ereto',
       },
       {
-        imgSrc: 'https://www.inspireusafoundation.org/file/2021/06/leg-extension-machine.gif',
+        imgSrc: gifs.legExtension,
         imgAlt: 'Cadeira Extensora',
         musculos: 'Coxas',
         exercicio: 'Cadeira Extensora',
@@ -207,7 +209,7 @@ export const treinos: Treino[] = [
         tecnica: 'Drop set na última série',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/dumbbell-sumo-squat.gif',
+        imgSrc: gifs.dumbbellSumoSquat,
         imgAlt: 'Agachamento Sumô com Halter',
         musculos: 'Glúteo / Adutores',
         exercicio: 'Agachamento Sumô com Halter',
@@ -217,7 +219,7 @@ export const treinos: Treino[] = [
         tecnica: 'Pausa 2s no fundo; joelhos para fora; ativa adutores e glúteo',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/05/Cable-Donkey-Kickback.gif',
+        imgSrc: gifs.cableDonkeyKickback,
         imgAlt: 'Coice de Glúteo no Cabo',
         musculos: 'Glúteo',
         exercicio: 'Coice de Glúteo no Cabo (Kickback)',
@@ -234,7 +236,7 @@ export const treinos: Treino[] = [
     subtitulo: 'Glúteo Médio + Adutores — Foco Lateral e Estabilização',
     exercicios: [
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Hip-Thrust.gif',
+        imgSrc: gifs.barbellHipThrust,
         imgAlt: 'Hip Thrust Unilateral com Barra',
         musculos: 'Glúteo',
         exercicio: 'Hip Thrust Unilateral com Barra',
@@ -244,7 +246,7 @@ export const treinos: Treino[] = [
         tecnica: 'Pausa 2s no topo; quadril nivelado',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Hip-Abduction.gif',
+        imgSrc: gifs.cableHipAbduction,
         imgAlt: 'Abdução em Pé com Cabo',
         musculos: 'Glúteo Médio',
         exercicio: 'Abdução em Pé com Cabo (ankle strap)',
@@ -254,7 +256,7 @@ export const treinos: Treino[] = [
         tecnica: 'Tronco reto; não balance o quadril',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/05/Cable-Hips-Adduction.gif',
+        imgSrc: gifs.cableHipsAdduction,
         imgAlt: 'Cadeira Adutora',
         musculos: 'Adutores',
         exercicio: 'Cadeira Adutora',
@@ -264,7 +266,7 @@ export const treinos: Treino[] = [
         tecnica: 'Feche devagar (3s excêntrico); pausa no pico',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/dumbbell-sumo-squat.gif',
+        imgSrc: gifs.dumbbellSumoSquat,
         imgAlt: 'Agachamento Lateral Sumo',
         musculos: 'Glúteo / Adutores',
         exercicio: 'Agachamento Lateral Sumo (passo lateral)',
@@ -274,7 +276,7 @@ export const treinos: Treino[] = [
         tecnica: 'Desça até 90° na perna de apoio',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lateral-Band-Walk.gif',
+        imgSrc: gifs.lateralBandWalk,
         imgAlt: 'Monster Walk com Faixa Elástica',
         musculos: 'Glúteo Médio',
         exercicio: 'Monster Walk com Faixa Elástica',
@@ -284,7 +286,7 @@ export const treinos: Treino[] = [
         tecnica: 'Passos lentos; faixa acima do joelho; glúteo médio ativo',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Glute-Bridge.gif',
+        imgSrc: gifs.gluteBridge,
         imgAlt: 'Elevação Pélvica no Chão com Faixa',
         musculos: 'Glúteo',
         exercicio: 'Elevação Pélvica no Chão com Faixa',
@@ -301,7 +303,7 @@ export const treinos: Treino[] = [
     subtitulo: 'Glúteo Full + Core — Foco Máximo Glúteo + Abdominal',
     exercicios: [
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Hip-Thrust.gif',
+        imgSrc: gifs.barbellHipThrust,
         imgAlt: 'Hip Thrust com Barra bilateral',
         musculos: 'Glúteo',
         exercicio: 'Hip Thrust com Barra (bilateral)',
@@ -311,7 +313,7 @@ export const treinos: Treino[] = [
         tecnica: 'Prioridade máxima: pausa 2s no topo',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/05/Dumbbell-Bulgarian-Split-Squat.gif',
+        imgSrc: gifs.dumbbellBulgarianSplitSquat,
         imgAlt: 'Agachamento Búlgaro com Barra',
         musculos: 'Glúteo / Coxas',
         exercicio: 'Agachamento Búlgaro com Barra',
@@ -321,7 +323,7 @@ export const treinos: Treino[] = [
         tecnica: 'Perna da frente ativa o glúteo; tronco levemente inclinado',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/05/Cable-Donkey-Kickback.gif',
+        imgSrc: gifs.cableDonkeyKickback,
         imgAlt: 'Extensão de Quadril no Cabo 4 apoios',
         musculos: 'Glúteo',
         exercicio: 'Extensão de Quadril no Cabo (4 apoios)',
@@ -331,7 +333,7 @@ export const treinos: Treino[] = [
         tecnica: 'Joelho 90°; contraia glúteo no topo; quadril estável',
       },
       {
-        imgSrc: 'https://www.inspireusafoundation.org/wp-content/uploads/2022/11/straight-leg-deadlift.gif',
+        imgSrc: gifs.straightLegDeadlift,
         imgAlt: 'Stiff Romeno Unilateral com Halter',
         musculos: 'Glúteo / Isquiotibiais',
         exercicio: 'Stiff Romeno Unilateral com Halter',
@@ -341,7 +343,7 @@ export const treinos: Treino[] = [
         tecnica: 'Desça em 3s; equilíbrio e foco no glúteo e isquiotibial',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Hanging-Leg-Raise.gif',
+        imgSrc: gifs.hangingLegRaise,
         imgAlt: 'Elevação de Pernas no Suporte',
         musculos: 'Abdominais',
         exercicio: 'Elevação de Pernas no Suporte',
@@ -351,7 +353,7 @@ export const treinos: Treino[] = [
         tecnica: 'Sem balanço; desça antes de tocar o chão',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Ab-Wheel-Rollout.gif',
+        imgSrc: gifs.abWheelRollout,
         imgAlt: 'Roda Abdominal',
         musculos: 'Core',
         exercicio: 'Roda Abdominal (Ab Wheel)',
@@ -361,7 +363,7 @@ export const treinos: Treino[] = [
         tecnica: 'Lombar neutra; não deixe quadril afundar',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/04/Cable-Crunch.gif',
+        imgSrc: gifs.cableCrunch,
         imgAlt: 'Crunch na Polia Alta',
         musculos: 'Abdominais',
         exercicio: 'Crunch na Polia Alta',
@@ -371,7 +373,7 @@ export const treinos: Treino[] = [
         tecnica: 'Contraia o abdômen; sem jogar o pescoço',
       },
       {
-        imgSrc: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Plank.gif',
+        imgSrc: gifs.plank,
         imgAlt: 'Prancha Isométrica',
         musculos: 'Core',
         exercicio: 'Prancha Isométrica',
