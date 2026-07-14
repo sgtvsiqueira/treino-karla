@@ -1,15 +1,24 @@
 export const gifs = {
+  // Peito
+  barbellBenchPress: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Bench-Press.gif',
+  inclineBarbellBenchPress: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Incline-Barbell-Bench-Press.gif',
+  dumbbellFly: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Fly.gif',
+
   // Costas
   widegripLatPulldown: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Lat-Pulldown.gif',
+  seatedCableRow: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Seated-Cable-Row.gif',
   dumbbellRow: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Row.gif',
 
   // Deltoides
-  arnoldPress: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Arnold-Press.gif',
-  reverseCableFly: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/cable-rear-delt-fly.gif',
+  dumbbellShoulderPress: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dumbbell-Shoulder-Press.gif',
+  facePull: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Face-Pull.gif',
   dumbbellLateralRaise: 'https://fitnessprogramer.com/wp-content/uploads/2021/10/Dumbbell-Lateral-to-Front-Raise.gif',
 
   // Braços
+  triceppushdown: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Pushdown.gif',
   skullCrusher: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Dumbbell-Skull-Crusher.gif',
+  barbellCurl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Curl.gif',
+  concentrationCurl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Concentration-Curl.gif',
   hammerCurl: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Hammer-Curl.gif',
 
   // Glúteo / Posterior
@@ -18,7 +27,6 @@ export const gifs = {
   barbellHipThrust: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Hip-Thrust.gif',
   barbellRomanianDeadlift: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif',
   cableHipAbduction: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Cable-Hip-Abduction.gif',
-  plankHipDips: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Glute-Bridge-.gif',
   gluteBridge: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Glute-Bridge-.gif',
 
   // Quadríceps / Anterior
@@ -38,6 +46,10 @@ export const gifs = {
   straightLegDeadlift: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Barbell-Romanian-Deadlift.gif',
 
   // Core / Abdominais
+  plankHipDips: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Glute-Bridge-.gif',
+  deadBug: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Dead-Bug.gif',
+  bicycleCrunch: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Bicycle-Crunch.gif',
+  russianTwist: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Russian-Twist.gif',
   hangingLegRaise: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Hanging-Knee-Raises.gif',
   abWheelRollout: 'https://fitnessprogramer.com/wp-content/uploads/2021/06/Ab-Wheel-Rollout.gif',
   cableCrunch: 'https://fitnessprogramer.com/wp-content/uploads/2021/02/Kneeling-Cable-Crunch.gif',
