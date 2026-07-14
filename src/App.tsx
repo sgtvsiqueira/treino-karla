@@ -18,8 +18,8 @@ export default function App() {
             <div className="header-meta">Deload semana 9 — 08/09/2026</div>
           </div>
           <div className="chips">
-            <span className="chip">6 dias / semana</span>
-            <span className="chip hi">Glúteo 4x · Superiores 2x · Core 3x</span>
+            <span className="chip">6 dias / semana · Seg a Sáb</span>
+            <span className="chip hi">Híbrido · Glúteo 4x · Superiores 2x · Core 3x</span>
             <span className="chip">A · B · C · D · E · F</span>
           </div>
         </div>
